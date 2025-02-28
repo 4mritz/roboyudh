@@ -1,0 +1,9 @@
+.layout {
+    background-image: url(/public/bgimage.png); /* No quotes inside url() */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding: 20px; /* Optional */
+    
+}

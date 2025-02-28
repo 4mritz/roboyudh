@@ -1,0 +1,163 @@
+/* Events Page Wrapper */
+.events-page {
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    background-color: #000; /* Adjust based on your theme */
+  }
+  
+  /* Header Section */
+  .events-header {
+    position: relative;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    z-index: 1;
+  }
+  
+  .events-header h1 {
+    font-size: 3em;
+    margin-top: 120px;
+    margin-left: 100px;
+  }
+  
+  /* Grid Layout for Events */
+  .events-canvas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Event Card Container */
+  .event-container {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  /* Card Styling */
+  .event-card {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: box-shadow 0.2s ease-in-out, opacity 0.3s ease-in-out, border-radius 0.3s ease, background-position 0.3s ease;
+    scale: 95%;
+  }
+  
+  /* Background Image */
+  .event-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  /* Neon Glow Effect */
+  .event-card::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 20px;
+    z-index: -1;
+    border-radius: 50%;
+  }
+  
+  /* Title Styling */
+  .event-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 40%;
+    z-index: 2;
+    text-transform: uppercase;
+  }
+  
+  /* Subtitle Styling */
+  .event-subtitle {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    z-index: 1;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-weight: normal;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    text-align: center;
+  }
+  
+  /* Hover Effects */
+  .event-container:hover .event-card {
+    transform: scale(0.95);
+    border-radius: 50px;
+    box-shadow: 
+      0px 0px 5px 1px rgba(180, 43, 1, 0.8),   
+      0px 0px 10px 3px rgba(255, 8, 0, 0.6),  
+      0px 0px 15px 4px rgba(255, 42, 0, 0.4);
+    background-position: center bottom;
+  }
+  
+  /* Hover: Title Moves Up */
+  .event-container:hover .event-title {
+    top: 4%;
+    font-size: 2.5rem;
+  }
+  
+  /* Hover: Subtitle Becomes Visible */
+  .event-container:hover .event-subtitle {
+    opacity: 1;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: white;
+    top: 58%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .events-canvas {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, auto);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .events-canvas {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(8, auto);
+    }
+  }
+  

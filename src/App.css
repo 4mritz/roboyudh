@@ -1,10 +1,10 @@
 /* Body and HTML Settings */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
   overflow-x: hidden;
-  background-image: url('https://wallpaperaccess.com/full/19674.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -15,26 +15,29 @@ html, body {
 
 /* Header Section */
 .header {
-  position: relative;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
   padding: 10px;
-  text-align: left;
   z-index: 1;
-}
-
-.header h1 {
-  font-size: 3em;
-  margin-top: 120px;
-  margin-left: 100px;
+  font-size: x-large;
 }
 
 /* Fullscreen container with 4x2 Grid */
 .canvas {
+  box-shadow: 0px 0px 20px hsla(0, 0%, 100%, 0.221);
+  margin: 20px;
+  border-radius: 60px;
+  backdrop-filter: blur(4px);
+  background-color: hsla(0, 0%, 100%, 0.074);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 20px;
-  padding: 50px;
+  padding: 50px 60px;
   justify-content: center;
   align-items: center;
   height: auto;
@@ -48,8 +51,8 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Make sure nothing overflows */
-  transition: all 0.3s ease; /* Smooth transition for scaling */
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 /* Card Styling */
@@ -59,20 +62,21 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0px; /* Initial border radius is 0 */
+  border-radius: 0px;
   width: 100%;
   height: 100%;
   overflow: hidden;
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
-  transition: box-shadow 0.2s ease-in-out, opacity 0.3s ease-in-out, border-radius 0.3s ease, background-position 0.3s ease;
-  scale:95%;
+  transition: box-shadow 0.2s ease-in-out, opacity 0.3s ease-in-out,
+    border-radius 0.3s ease, background-position 0.3s ease;
+  scale: 95%;
 }
 
 /* Add a pseudo-element for the background image */
 #card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -80,13 +84,13 @@ html, body {
   height: 100%;
   background-size: cover;
   background-position: center;
-  z-index: -1; /* Send the background image behind the text */
-  transition: filter 0.3s ease-in-out; /* Removed blur */
+  z-index: -1;
+  transition: filter 0.3s ease-in-out;
 }
 
 /* Static Neon Glow Underneath the Cards */
 #card::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -125,43 +129,34 @@ html, body {
   color: rgb(255, 255, 255);
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  font-weight: normal; /* Initial font weight */
+  font-weight: normal;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
   text-align: center;
-
 }
 
 /* Hover Effect: Card Transformation */
 .container:hover #card {
-  transform: scale(0.95); /* Slightly shrink the card */
-  border-radius: 50px; /* Change border-radius to 50px on hover */
-  box-shadow:  0px 0px 5px 1px rgba(180, 43, 1, 0.8),   /* Reduced glow radius and spread */
-  0px 0px 10px 3px rgba(255, 8, 0, 0.6),  /* Reduced glow radius and spread */
-  0px 0px 15px 4px rgba(255, 42, 0, 0.4);  /* Reduced glow radius and spread */; /* Neon glow effect */
-  
-  background-position: center bottom; 
-  
+  transform: scale(0.95);
+  border-radius: 50px;
+  box-shadow: 0px 0px 5px 1px rgba(180, 43, 1, 0.8),
+    0px 0px 10px 3px rgba(255, 8, 0, 0.6),
+    0px 0px 15px 4px rgba(255, 42, 0, 0.4);
+  background-position: center bottom;
 }
 
 /* Hover Effect: Title moves to 1% */
 .container:hover .title {
-  top: 4%; /* Move title to the top */
-  font-size: 2.5rem; /* Optionally increase font size */
+  top: 4%;
+  font-size: 2.5rem;
 }
 
 /* Hover Effect: Subtitle comes to center */
 .container:hover .subtitle {
   opacity: 1;
-  transform: translateY(-50%); /* Center subtitle vertically */
-  font-weight: bold; /* Make the subtitle bold */
-  color: white; /* Make the subtitle white */
-  top: 58%;
-}
-
-/* Show subtitle when hovering */
-.container:hover .subtitle {
-  opacity: 1;
   transform: translateY(-50%);
+  font-weight: bold;
+  color: white;
+  top: 58%;
 }
 
 /* Responsive Design for Smaller Screens */
@@ -177,4 +172,204 @@ html, body {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(8, auto);
   }
+}
+
+/* Import Orbitron Font */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0a0a0a;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.robowars-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding: 20px;
+  min-height: 100vh;
+  border-radius: 15px;
+  size: 100%;
+}
+
+/* Header */
+.robowars-header h1 {
+  font-size: 4rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(255, 107, 107, 0.8);
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+/* Small Back Button */
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.back-button a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.back-button a:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+/* Main Content Layout */
+.robowars-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  max-width: 1200px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Image Section */
+.robowars-image-container {
+  flex: 1;
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
+  margin-top: -450px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+}
+
+.robowars-image {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* Text Content */
+.robowars-details {
+  flex: 2;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 25px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  transition: 0.3s ease-in-out;
+  position: relative;
+  z-index: 3;
+}
+
+.robowars-details h2 {
+  color: #ff6b6b;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgba(255, 107, 107, 0.8);
+}
+
+.robowars-details p,
+.robowars-details ul {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.robowars-details ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.robowars-details ul li {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+}
+
+/* List Hover Effect */
+.robowars-details ul li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  padding-left: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Register Button */
+.register-button {
+  margin-top: 40px;
+  position: absolute;
+  top: 725px; /* Adjust this value to position the button below the image */
+  left: 27.5%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to center the button */
+  scale: 110%;
+}
+
+.register-button a {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff6b6b, #ff9f43);
+  padding: 15px 30px;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+.register-button a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+  background: linear-gradient(45deg, #ff9f43, #ff6b6b);
+}
+
+/* Event Organizers Section */
+.event-organizers {
+  margin-top: 40px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  max-width: 400px;
+  width: 100%;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 845px; 
+  left: 12.5%; 
+}
+
+/* Event Organizers Heading */
+.event-organizers h3 {
+  font-size: 2rem;
+  color: #ff6b6b;
+  margin-bottom: 20px;
+  margin-top: -5px;
+  text-shadow: 0 0 15px rgba(255, 107, 107, 0.8);
+}
+
+/* Contact Number Style */
+.event-organizers p {
+  margin: 10px 0;
+}
+
+.event-organizers p strong {
+  font-size: 1.3rem;
+  color: #ff9f43;
 }
