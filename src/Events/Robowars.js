@@ -5,11 +5,6 @@ import "../App.css";
 const Robowars = () => {
   return (
     <div className="robowars-container">
-      {/* Back Button */}
-      <div className="back-button">
-        <Link to="/">← Back</Link>
-      </div>
-
       {/* Header */}
       <header className="robowars-header">
         <h1>Robowars</h1>

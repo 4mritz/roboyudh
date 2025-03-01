@@ -5,5 +5,10 @@
     background-attachment: fixed;
     min-height: 100vh;
     padding: 20px; /* Optional */
-    
+
+}
+
+.content {
+    flex-grow: 1; /* Ensures content takes up remaining space */
+    padding: 20px;
 }
