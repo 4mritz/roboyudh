@@ -6,10 +6,7 @@ import raceImage from './rc.png'; // Adjust the path as necessary
 const Formularc = () => {
   return (
     <div className="robowars-container">
-      {/* Back Button */}
-      <div className="back-button">
-        <Link to="/">← Back</Link>
-      </div>
+      
 
       {/* Header */}
       <header className="robowars-header">
@@ -55,8 +52,13 @@ const Formularc = () => {
 
       {/* Register Button at Bottom */}
       <div className="register-button">
-        <Link to="/register">Register Now</Link>
-      </div>
+  <a href="https://unstop.com/o/WRUCaAf?lb=HYHZmLEj" 
+     target="_blank" 
+     rel="noopener noreferrer">
+     Register Now
+  </a>
+</div>
+
 
       <div className="event-organizers">
         <h3>Event Organizers</h3>

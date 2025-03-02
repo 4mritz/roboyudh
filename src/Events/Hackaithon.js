@@ -6,10 +6,7 @@ import hackaiImage from './ai.png'; // Adjust the path as necessary
 const Hackaithon = () => {
   return (
     <div className="robowars-container">
-      {/* Back Button */}
-      <div className="back-button">
-        <Link to="/">← Back</Link>
-      </div>
+      
 
       {/* Header */}
       <header className="robowars-header">
@@ -53,8 +50,13 @@ const Hackaithon = () => {
 
       {/* Register Button at Bottom */}
       <div className="register-button">
-        <Link to="/register">Register Now</Link>
-      </div>
+  <a href="https://unstop.com/o/v0J9nS8?lb=HYHZmLEj" 
+     target="_blank" 
+     rel="noopener noreferrer">
+     Register Now
+  </a>
+</div>
+
 
       <div className="event-organizers">
         <h3>Event Organizers</h3>

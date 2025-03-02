@@ -50,8 +50,13 @@ const Robosoccer = () => {
 
       {/* Register Button at Bottom */}
       <div className="register-button">
-        <Link to="/register">Register Now</Link>
-      </div>
+  <a href="https://unstop.com/o/kYQH4cI?lb=HYHZmLEj&utm_medium=Share&utm_source=shortUrl" 
+     target="_blank" 
+     rel="noopener noreferrer">
+     Register Now
+  </a>
+</div>
+
 
       <div className="event-organizers">
         <h3>Event Organizers</h3>

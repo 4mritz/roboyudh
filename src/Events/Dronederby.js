@@ -6,11 +6,7 @@ import droneImage from './drone.png'; // Adjust the path as necessary
 const Dronederby = () => {
   return (
     <div className="robowars-container">
-      {/* Back Button */}
-      <div className="back-button">
-        <Link to="/">← Back</Link>
-      </div>
-
+      
       {/* Header */}
       <header className="robowars-header">
         <h1>Drone Derby</h1>
@@ -55,8 +51,13 @@ const Dronederby = () => {
 
       {/* Register Button at Bottom */}
       <div className="register-button">
-        <Link to="/register">Register Now</Link>
-      </div>
+  <a href="https://unstop.com/o/s2dfi3m?lb=HYHZmLEj" 
+     target="_blank" 
+     rel="noopener noreferrer">
+     Register Now
+  </a>
+</div>
+
 
       <div className="event-organizers">
         <h3>Event Organizers</h3>

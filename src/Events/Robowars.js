@@ -85,9 +85,11 @@ const Robowars = () => {
       </div>
 
       {/* Register Button at Bottom */}
+      {/* Register Button - Navigate to Loading Screen First */}
       <div className="register-button">
-        <Link to="/register">Register Now</Link>
+        <Link to="/loading">Register Now</Link>
       </div>
+
 
       <div class="event-organizers">
     <h3>Event Organizers</h3>
