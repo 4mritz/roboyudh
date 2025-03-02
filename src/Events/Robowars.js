@@ -85,10 +85,13 @@ const Robowars = () => {
       </div>
 
       {/* Register Button at Bottom */}
-      {/* Register Button - Navigate to Loading Screen First */}
       <div className="register-button">
-        <Link to="/loading">Register Now</Link>
-      </div>
+  <a href="https://unstop.com/p/robo-wars-sathyabama-university-1415219?lb=HYHZmLEj&utm_medium=Share&utm_source=shortUrl" 
+     target="_blank" 
+     rel="noopener noreferrer">
+     Register Now
+  </a>
+</div>
 
 
       <div class="event-organizers">
